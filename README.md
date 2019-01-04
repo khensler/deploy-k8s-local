@@ -25,3 +25,4 @@ examples
 
 4) Delete cluster Test-Cluster
 .\k8-lc.ps1 -username k8admin -nodes 3 -clusterName Test-Cluster -clonefrom ubuntu-18.0.4-lts -portGroup "VM Network" -remove $true -master $true
+
