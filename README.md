@@ -38,7 +38,7 @@ App deployment:
 
 To deploy planespotter (https://github.com/yfauser/planespotter)
 
-You may execute the following if you named your cluster Test-Cluster  Please note the frontend hostname foudn in https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
+You may execute the following if you named your cluster Test-Cluster  Please note the frontend hostname found in https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
 ```
 kubectl --kubeconfig=Test-Cluster.conf create ns planespotter
 kubectl --kubeconfig=Test-Cluster.conf config set-context kubernetes-admin@kubernetes --namespace planespotter
