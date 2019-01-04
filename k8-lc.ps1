@@ -84,9 +84,9 @@ echo "chmod a+r /etc/kubernetes/admin.conf" >> /tmp/k8s-master.sh
 echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml" >> /tmp/k8s-master.sh
 echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf taint nodes --all node-role.kubernetes.io/master-" >> /tmp/k8s-master.sh
 echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/google/metallb/v0.7.3/manifests/metallb.yaml" >> /tmp/k8s-master.sh
-echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/moron10321/deploy-k8s-local/master/layer2-config.yaml" >> /tmp/k8s-master.sh
+echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/layer2-config.yaml" >> /tmp/k8s-master.sh
 echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml" >> /tmp/k8s-master.sh
-echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/moron10321/deploy-k8s-local/master/service-loadbalancer.yaml" >> /tmp/k8s-master.sh
+echo "kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/service-loadbalancer.yaml" >> /tmp/k8s-master.sh
 '@
 $script = $script + "`n"+ 'echo "cp -i /etc/kubernetes/admin.conf /home/'+ $username+'/.kube/config" >> /tmp/k8s-master.sh' +"`n"
 $script = $script + "`n"+ 'echo "chown -R '+ $username+":"+ $username+' /home/k8admin/.kube" >> /tmp/k8s-master.sh' +"`n"
