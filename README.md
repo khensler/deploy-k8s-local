@@ -18,7 +18,7 @@ Usage
   
 examples
 
-1) Build a 3 node culster on an already connected vcenter (connect-viserver vcenter) from a template vm ubuntu-18.0.4-lts on the "VM Network" network
+1) Build a 3 node culster on an already connected vcenter (connect-viserver vcenter) from a template vm ubuntu-18.0.4-lts with a user k8admin already created on the network "VM Network"
 ```
 .\k8-lc.ps1 -username k8admin -nodes 3 -clusterName Test-Cluster -clonefrom ubuntu-18.0.4-lts -portGroup "VM Network"
 ```
