@@ -127,7 +127,7 @@ $out = ($vm | Set-Annotation -CustomAttribute "K8-Join" -Value $joincmd)
 
 Write-Host "Get config file"
 Copy-VMGuestFile -Source /etc/kubernetes/admin.conf -Destination (((Get-Item -Path ".\").FullName)+"\$clusterName.conf") -VM $vm -GuestToLocal -GuestUser $username -GuestPassword $password
-Write-Host "Config file at: "+(((Get-Item -Path ".\").FullName)+"\$clusterName.conf")
+Write-Host "Config file at: "(((Get-Item -Path ".\").FullName)+"\$clusterName.conf")
 }else{
 
 Invoke-VMScript -VM $vm -ScriptType Bash -ScriptText $script -GuestUser $username -GuestPassword $plainpassword  -RunAsync| out-null
