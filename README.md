@@ -36,7 +36,7 @@ examples
 ```
 App deployment:
 
-To deploy planspotter (https://github.com/yfauser/planespotter)
+To deploy planespotter (https://github.com/yfauser/planespotter)
 
 You may execute the following if you named your cluster Test-Cluster  Please note the frontend hostname foudn in https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
 ```
