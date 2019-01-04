@@ -6,7 +6,7 @@ vcenter
 powercli
 ubuntu template
 
-The script will pull  https://raw.githubusercontent.com/moron10321/deploy-k8s-local/master/layer2-config.yaml.  
+The script will pull  https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/layer2-config.yaml.  
 You will need to customize this file and host it yourself to use a different IP range for external IPs
 
 The kube conf file will be copied to the current directory named as the clustername.conf
@@ -38,13 +38,13 @@ App deployment:
 
 To deploy planspotter (https://github.com/yfauser/planespotter)
 
-You may execute the following if you named your cluster Test-Cluster  Please note the frontend hostname foudn in https://raw.githubusercontent.com/moron10321/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
+You may execute the following if you named your cluster Test-Cluster  Please note the frontend hostname foudn in https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
 ```
 kubectl --kubeconfig=Test-Cluster.conf create ns planespotter
 kubectl --kubeconfig=Test-Cluster.conf config set-context kubernetes-admin@kubernetes --namespace planespotter
-kubectl --kubeconfig=Test-Cluster.conf create -f https://raw.githubusercontent.com/moron10321/deploy-k8s-local/master/mysql_pod.yaml
+kubectl --kubeconfig=Test-Cluster.conf create -f https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/mysql_pod.yaml
 kubectl --kubeconfig=Test-Cluster.conf create -f https://raw.githubusercontent.com/yfauser/planespotter/master/kubernetes/app-server-deployment_all_k8s.yaml
-kubectl --kubeconfig=Test-Cluster.conf create -f https://raw.githubusercontent.com/moron10321/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
+kubectl --kubeconfig=Test-Cluster.conf create -f https://raw.githubusercontent.com/khensler/deploy-k8s-local/master/frontend-deployment_all_k8s.yaml
 kubectl --kubeconfig=Test-Cluster.conf create -f https://raw.githubusercontent.com/yfauser/planespotter/master/kubernetes/redis_and_adsb_sync_all_k8s.yaml
 ```
 
