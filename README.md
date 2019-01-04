@@ -15,14 +15,18 @@ Usage
 examples
 
 1) Build a 3 node culster on an already connected vcenter (connect-viserver vcenter) from a template vm ubuntu-18.0.4-lts on the "VM Network" network
+
 .\k8-lc.ps1 -username k8admin -nodes 3 -clusterName Test-Cluster -clonefrom ubuntu-18.0.4-lts -portGroup "VM Network"
 
 2) Scale existing cluster Test-Cluster up by 3 nodes
+
 .\k8-lc.ps1 -username k8admin -nodes 2 -clusterName Test-Cluster -clonefrom ubuntu-18.0.4-lts -portGroup "VM Network"
 
 3) Scale existing cluster Test-Cluster down by 2 nodes
+
 .\k8-lc.ps1 -username k8admin -nodes 2 -clusterName Test-Cluster -clonefrom ubuntu-18.0.4-lts -portGroup "VM Network" -remove $true
 
 4) Delete cluster Test-Cluster
+
 .\k8-lc.ps1 -username k8admin -nodes 3 -clusterName Test-Cluster -clonefrom ubuntu-18.0.4-lts -portGroup "VM Network" -remove $true -master $true
 
